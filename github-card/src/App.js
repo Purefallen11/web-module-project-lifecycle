@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react'
 import axios from 'axios'
 import UserCard from './components/UserCard';
+import FollowersCard from './components/FollowersCard';
 
 
 class App extends React.Component {
@@ -42,8 +43,12 @@ class App extends React.Component {
     return (
       <div className='section'>
           <div className='userCard'>
-            <UserCard name={this.state.data.name} img={this.state.data.avatar_url} location={this.state.data.location} bio={this.state.data.bio} />
-          </div>
+          <UserCard name={this.state.data.name} img={this.state.data.avatar_url} location={this.state.data.location} bio={this.state.data.bio} />
+          <h2>Followers</h2>
+          {this.state.followers.map(followers => {
+            return (<FollowersCard key={followers.id} data={followers} />
+          )})}
+        </div>
           
       </div>
     )
