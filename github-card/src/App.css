@@ -2,9 +2,18 @@
   text-align: center;
 }
 
-.card{
-  width: 400px;
-  height: 400px;
+.section{
+  position: relative;
+  width: 500px;
+  height: 500px;
+
+}
+
+.userCard{
+  width: 200px;
+  height: 150px;
+  margin: 5px auto;
+  position: absolute;
 }
 
 .App-header {
