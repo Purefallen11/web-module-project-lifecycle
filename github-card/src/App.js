@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react'
 import axios from 'axios'
+import UserCard from './components/UserCard';
 
 class App extends React.Component {
   constructor() {
@@ -27,7 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        hello world
+        <UserCard name={this.state.data.name} img={this.state.data.avatar_url} location={this.state.data.location} bio={this.state.data.bio} />
       </div>
     )
   }
